@@ -1,8 +1,8 @@
-function[Voltage_reg] = Voltage_regulation (Current_primary , phase_voltage_primary  , Total_Leakage_reactance_referred_primary , Total_resistance_referred_primary )
+function[Voltage_reg] = Voltage_regulation (Current_primary , phase_voltage_primary  , Total_Leakage_reactance_referred_primary , Total_resistance_referred_primary  ,cos_theta)
 
 disp('Voltage Regulation Calculation \n \n');
 
-cos_theta = input('Enter the valuw of power factor');
+
 
 sin_theta = sqrt(1-cos_theta^2);
 

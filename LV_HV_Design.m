@@ -1,36 +1,9 @@
-function [ Turns_primary , Turns_secondary , Area_of_one_conductor_primary , Area_of_one_conductor_secondary  ,Current_primary ,Current_secondary , phase_voltage_primary , phase_voltage_secondary ] = LV_HV_Design(  KVA ,  Current_Density , Primary_voltage , Secondary_voltage , Phases , Et , Hw , Wc )
+function [ Turns_primary , Turns_secondary , Area_of_one_conductor_primary , Area_of_one_conductor_secondary  ,Current_primary ,Current_secondary , phase_voltage_primary , phase_voltage_secondary ] = LV_HV_Design(  KVA ,  Current_Density , Primary_voltage , Secondary_voltage , Phases , Et , Hw , Wc , LV_phase , HV_phase , LV , HV)
 
 
 
-disp(' Lv & HV winding Design \n\n')
+disp(' Lv & HV winding Design \n\n');
 
-
- LV = min(Primary_voltage , Secondary_voltage)
- HV = max(Primary_voltage , Secondary_voltage)
-
- 
- 
- %% Calculating  Phase Voltage of LV and HV
- 
- if (Phases == 3)
-        LV_type = input("Press 1 if LV Winding is Star\nPress 2 if LV Winding is Delta :")
-        HV_type = input("Press 1 if HV Winding is Star\nPress 2 if HV Winding is Delta : ")
-        if (LV_type == 1)
-            LV_phase = LV/sqrt(3)
-        elseif (LV_type == 2)
-            LV_phase = LV
-        end    
- 
-        if (HV_type == 1)
-            HV_phase = HV/sqrt(3)
-        elseif (HV_type == 2)
-            HV_phase = HV
-        end    
- else
-     LV_phase = LV
-     HV_phase = HV
- end
- 
  %% Lv DESIGN
  
  % here I have considered that the input of lv and Hv winding will be given seperately

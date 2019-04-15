@@ -1,25 +1,7 @@
-function [Total_Leakage_reactance_referred_primary , Total_resistance_referred_primary ] = Leakage_reactance(Frequency ,Turns_primary , Turns_secondary , Area_of_one_conductor_primary , Area_of_one_conductor_secondary)
+function [Total_Leakage_reactance_referred_primary , Total_resistance_referred_primary ] = Leakage_reactance(Frequency ,Turns_primary , Turns_secondary , Area_of_one_conductor_primary , Area_of_one_conductor_secondary ,Length_mean_turn_primary ,Length_mean_turn_Secondary ,Length_mean_turn_overall ,Lc , bp ,bs ,a ,rho)
 
 
 disp('Calculation of Leakage_reactance \n \n')
-
-Length_mean_turn_primary = input('Enter Length Mean turn of primary : ');
-
-Length_mean_turn_Secondary = input('Enter Length Mean turn of Secondary : ');
-
-Length_mean_turn_overall = mean([Length_mean_turn_primary ,Length_mean_turn_Secondary ])
-
-Lc = input('Enter Length of coil :  ');
-
-bp = input('Enter Thickness of primary :  ');
-
-bs = input('Enter Thickness of Secondary : ');
-
-a = input('Enter Width of duct');
-
-rho = input('Enter resistivity of winding : ');
-
-
 
 %% Calculating Leakage reactance Primary
 

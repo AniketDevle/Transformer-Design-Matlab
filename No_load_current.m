@@ -1,12 +1,8 @@
-function [Io ,Magnetic_VA ] = No_load_current(Bm , Ai ,Turns_primary , Phases , phase_voltage_primary , Frequency)
+function [Io ,Magnetic_VA ] = No_load_current(Bm , Ai ,Turns_primary , Phases , phase_voltage_primary , Frequency ,li ,density ,Loss_per_kg)
 
 disp('No Load Current Calculation \n \n' );
 
-li = input('Enter the Length of iron : ' );
 
-density = input ('Enter the density of the iron ');
-
-Loss_per_kg = input('Enter loss per kg of iron ');
 
 ATo = (li * Bm * Ai)/(4 * pi * 10^(-7) * Ai) 
 

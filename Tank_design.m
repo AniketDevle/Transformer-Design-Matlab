@@ -1,10 +1,6 @@
-function [Total_heat_dissipated , Dissipation ,Number_of_tubes] = Tank_design()
+function [Total_heat_dissipated , Dissipation ,Number_of_tubes] = Tank_design(Cooling_surface_area ,x , length_tube)
 
-Cooling_surface_area = input('Enter the Area of the cooling Surface');
 
-x = input('Enter the value of X ie ratio between \n surface area after inclusion of tubes and Cooling surface area');
-
-length_tube = input('Enter the height of Tube');
 %% Cooling Surface will dissipate 
 
 Cooling_surface_dissipate = ( 6 + 6.5 )* Cooling_surface_area;
